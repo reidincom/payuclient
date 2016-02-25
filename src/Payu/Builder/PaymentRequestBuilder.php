@@ -103,8 +103,7 @@ class PaymentRequestBuilder extends BuilderAbstract
         $city = null,
         $state = null,
         $countryCode = null
-    )
-    {
+    ) {
         $this->billing = new Billing(
             $firstName,
             $lastName,
@@ -154,8 +153,7 @@ class PaymentRequestBuilder extends BuilderAbstract
         $city = null,
         $state = null,
         $countryCode = null
-    )
-    {
+    ) {
         $this->delivery = new Delivery(
             $firstName,
             $lastName,
@@ -197,10 +195,10 @@ class PaymentRequestBuilder extends BuilderAbstract
         $info = null,
         $price = null,
         $version = null,
-        $vat = null
+        $vat = null,
+        $priceType = null
     ) {
-
-        $this->basket->add(new Product($name, $code, $quantity, $info, $price, $version, $vat));
+        $this->basket->add(new Product($name, $code, $quantity, $info, $price, $version, $vat, $priceType));
         return $this;
     }
 
